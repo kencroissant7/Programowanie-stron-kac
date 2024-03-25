@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.calculator{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1000px;
+}
+#display{
+    float: right;
+    font-size: 5rem;
+    width: 100%;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    gap:1px;
+    padding: 1px;
+}
+button{
+    font-size: 3rem;
+    font-weight: 200;
+    width: 250px;
+    height: 100px;
+}
+.bluey{
+    background-color: rgb(48, 87, 203);
+    color: white;
+}
