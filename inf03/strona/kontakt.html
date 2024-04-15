@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><img src="C:\Users\Programista\Desktop\2abkct\inf03/baner.png"></header>
+
+    <nav><a href="index.html">Strona Główna</a><a href="kontakt.html">Kontakt</a></nav>
+
+<section>
+    <div class="blok"></div>
+
+
+    <div class="blok2"><h2>Kontakt</h2>
+        <div class="main">
+    <table>
+
+        <tr>
+            <td>Imię:</td> 
+        </tr>
+
+        <tr>
+            <td>Nazwisko:</td>
+        </tr>
+
+        <tr>
+            <td>E-mail:</td>
+        </tr>
+
+        <tr>
+            <td>Zgłoszenie:</td>
+        </tr>
+
+    </table>
+    <div class="main2">
+    <input type="text" id="imie">
+    <input type="text" id="nazwisko">
+    <input type="text" id="email">
+    <select id="select"><option value="naprawa komputerów">naprawa komputerów</option><option value="odzyskiwanie danych">odzyskiwanie danych</option><option value="wirusy">wirusy</option><option value="konfiguracja LAN">konfiguracja LAN</option></select>
+</div></div>
+<div class="box1">
+    <input type="checkbox" value="Wyślij kopię wiadomości" name="Wyślij kopię wiadomości" checked><label for="Wyslij kopię wiadomości">Wyślij kopię wiadomości</label></div>
+    <div class="burton">
+    <button onclick="clear1()">Czyść</button><button id="send" onclick="send()">Wyślij</button>
+</div>
+<hr>
+<div id="nazwa"></div>
+<div id="emailpokaz"></div>
+<div id="selectpokaz"></div>
+    </div>
+
+
+    <div class="blok"></div>
+
+</section>
+<footer><p>Autor:<i>0000000000</i></p></footer>
+
+<script>
+    function clear1(){
+        document.getElementById("nazwa").innerText = "";
+document.getElementById("emailpokaz").innerText = "" ;
+document.getElementById("selectpokaz").innerText = "" ;
+
+document.getElementById("imie").value = "";
+document.getElementById("nazwisko").value = "";
+document.getElementById("email").value = "";
+
+    }
+function send(){
+var imie = document.getElementById("imie").value;
+var nazwisko = document.getElementById("nazwisko").value;
+var email = document.getElementById("email").value;
+option = document.getElementById("select").value;
+
+document.getElementById("nazwa").innerText = imie + " " + nazwisko;
+document.getElementById("emailpokaz").innerText = email;
+document.getElementById("selectpokaz").innerText = option;
+
+}
+
+</script>
+</body>
+</html>

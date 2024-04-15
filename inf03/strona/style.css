@@ -1,0 +1,78 @@
+html,body{
+    background-color: #E0F7FA;
+    font-family: arial;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+header{
+    background-color:  #00838F;
+    height: 200px;
+}
+nav{
+    background-color: #006064;
+    padding:15px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    padding-right: 50px;
+}
+.blok{
+    height: 350px;
+    width: 33%;
+}
+section{
+    display: flex;
+}
+.blok li{
+    text-align: left;
+}
+footer{
+    background-color: #006064;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    margin-top: 250px;
+}
+a:hover{
+    color: #80DEEA;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main2{
+    display: flex;
+    flex-direction: column;
+}
+.blok2{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    margin: 1px;
+}
+td{
+    padding: 2px;
+    
+}
+.burton{
+    display: flex;
+}
+.burton button{
+    background-color:  #00838F;
+    color: white;
+    margin-right: 15px;
+}
+button:hover{
+    color: #80DEEA;
+}
+hr{
+    width: 280px;
+    border: black 2px 0px 0px 0px solid;
+}

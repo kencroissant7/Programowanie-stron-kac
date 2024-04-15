@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="form-group">  
+        <label for="day">DAY</label>
+        <input type="text" id="day" name="day" placeholder="DD">
+        <span class="error day-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="day">MONTH </label>
+        <input type="text" id="month" name="month" placeholder="MM">
+        <span class="error month-error"></span>
+        </div>
+        <div class="form-group">
+        <label for="day">YEAR </label>
+        <input type="text" id="year" name="year" placeholder="YYYY">
+        <span class="error year-error"></span>
+        </div>
+        </div>
+        <div class="szczalka">
+          <div class="hr">
+          <hr>
+          </div>
+       <button onclick="wynik" id="gruby_wynik"><img src="icon-arrow.svg"></button>
+       </div>
+    <div class="wynik">
+      <h1><span class="year-wynik">- -</span>years</h1>
+      <h1><span class="month-wynik">- -</span>months</h1>
+      <h1><span class="day-wynik">- -</span> days</h1>
+    </div>
+  
+  </div>
+</main>
+<script>
+const DayError = document.querySelector('.day-error');
+const MonthError = document.querySelector('.month-error');
+const YearError = document.querySelector('.year-error');
+const YearResult = document.querySelector('.year-wynik');
+const MonthResult = document.querySelector('.month-wynik');
+const DayResult = document.querySelector('.day-wynik');
+const SubmitBtn = document.querySelector('.szczalka');
+const InputDay = document.getElementById('day');
+const InputMonth = document.getElementById('month');
+const InputYear = document.getElementById('year');
+const InputRequiredError = 'This field is required';
+const InputDayError = 'Must be a valid day';
+const InputMonthError = 'Must be a valid month';
+const InputYearError = 'Must be in the past';
+const Canvas = document.querySelector('.can');
+
+
+
+function CheckDayInput()
+{
+    let value = InputDay.value;
+    if(value == '')
+    {
+        DayError.innerHTML = InputRequiredError;
+        return false;
+    }
+    else if(value < 1 || value > 31)
+    {
+        DayError.innerHTML = InputDayError;
+        return false;
+    }
+    else
+    {
+        DayError.innerHTML = '';
+        return true;
+    }
+}
+
+function CheckMonthInput()
+{
+    let value = InputMonth.value;
+    if(value == '')
+    {
+       MonthError.innerHTML = InputRequiredError;
+        return false;
+    }
+    else if(value < 1 || value > 12)
+    {
+        MonthError.innerHTML = InputMonthError;
+        return false;
+    }
+    else
+    {
+        MonthError.innerHTML = '';
+        return true;
+    }
+}
+
+
+
+function CheckYearInput() {
+    let value = InputYear.value;
+    let currentYear = new Date().getFullYear();
+    console.log(currentYear);
+    if (value == '') {
+        YearError.innerHTML = InputRequiredError;
+        return false;
+    }
+    else if (value > currentYear) {
+        YearError.innerHTML = InputYearError;
+        return false;
+    }
+    else {
+        YearError.innerHTML = '';
+        return true;
+    }
+}
+
+
+function calculateAge(birthday){
+	 var birthdate = new Date(birthday);
+     var today = new Date();
+
+     var years = today.getFullYear() - birthdate.getFullYear();
+  var months = today.getMonth() - birthdate.getMonth();
+  var days = today.getDate() - birthdate.getDate();
+
+
+  if (months < 0 || (months === 0 && days < 0)) {
+    years--;
+    if (months === 0) {
+      months = 11;
+    } else {
+      months = 12 + months;
+    }
+    days = 30 + days;
+  }
+
+    YearResult.innerHTML = years;
+    MonthResult.innerHTML = months;
+    DayResult.innerHTML = days;
+}
+
+
+
+SubmitBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    let day = CheckDayInput();
+    let month = CheckMonthInput();
+    let year = CheckYearInput();
+    if(!day || !month || !year) return
+    let birthday = `${InputMonth.value}/${InputDay.value}/${InputYear.value}`;
+    calculateAge(birthday);
+    Canvas.style.display = 'block';
+    setTimeout(function () {
+        Canvas.style.display = 'none';
+    }, 8000);
+
+})
+
+
+</script>
+</body>
+</html>
