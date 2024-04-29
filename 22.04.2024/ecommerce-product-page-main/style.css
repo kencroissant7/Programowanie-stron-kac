@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+.app{
+    display: none;
+}
+.navbar{
+    position:sticky;
+    font-weight: 500;
+    color: hsl(220, 14%, 75%);
+    margin-top: 25px;
+    font-family: kumbh sans;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+.img{
+    height: auto;
+    width: 150px;
+}
+ul{
+    display: flex;
+}
+li:hover{
+    padding-bottom: 40px;
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+    
+}
+nav li{
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration:none;
+    list-style: none;
+}
+hr{
+    border: 1px rgb(239, 239, 239) solid;
+    margin-top: -18px;
+}
+.profile_pic img{
+    width: 50px;
+    height: auto;
+}
+.right_nav{
+    display: flex;
+    align-items: center;
+    margin-left: 480px;
+}
+.profile_pic{
+    margin-left: 50px;
+}
+.right_main{
+    margin-top: 80px;
+}
+.left_main .imgg{
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    margin-right: 220px;
+}
+main{
+    font-family: kumbh sans;
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 75px;
+}
+.brand{
+    font-weight: 700;
+    color: hsl(26, 100%, 55%)
+}
+h1{
+    font-size:50px;
+}
+.top{
+    align-items: center;
+    display: flex;
+}
+.percent{
+    margin-left: 15px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+}
+.old_price{
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+.add img{
+    margin-top: -5px;
+    margin-right: 15px;
+}
+svg{
+    margin-right: 18px ;
+}
+.add{
+    font-family: kumbh sans;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    width: 340px;
+    height: 50px;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+}
+.buttons{
+    border-radius: 5px;
+    margin-right: 20px;
+    display: flex;
+    background-color: rgb(245, 245, 245);
+}
+.buttons button{
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 25px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    width: 60px;
+    height: 50px;
+    color: hsl(26, 100%, 55%);
+}
+input{
+    box-shadow: none;
+    background-color: rgb(245, 245, 245);
+    border: 0;
+}
+input:hover{
+    box-shadow: none;
+    border: 0;
+    background-color:rgb(245, 245, 245) ;
+}
+input:focus{
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background-color:rgb(245, 245, 245) ;
+}
+input:active{
+    box-shadow: none;
+    border: 0;
+    background-color:rgb(245, 245, 245) ;
+}
+input:focus{
+    box-shadow: none;
+    border: 0;
+    background-color:rgb(245, 245, 245) ;
+}
+.result_cart{
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+}
+.all_bt{
+    margin-top: 25px;
+    display: flex;
+}
+.description{
+    color: hsl(220, 14%, 75%);
+    width: 550px;
+}
+.attribution{
+    margin-bottom: 10px;
+    margin-top: 200px;
+}
+.images{
+    display: flex;
+}
+.images img{
+    border-radius: 10px;
+    margin-right: 27px;
+    margin-top: 16px;
+    width: 105px;
+    height: auto;
+}
+@media screen and (max-width:375px) {
+    
+    html,body{
+        width: 375px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .app{
+        display: flex;
+        margin-left: -25px;
+        border: 0;
+        background-color: white;
+    }
+    .app img{
+        margin-right: 15px;
+        height: 18px;
+        width: auto;
+    }
+    .navbar{
+        font-weight: 500;
+        color: hsl(220, 14%, 75%);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left:50px;
+        font-family: kumbh sans;
+        display: flex;
+        align-items: center;
+    }
+    nav{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+    .right_nav{
+        display: flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .profile_pic{
+        margin-left: 25px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    .right_main{
+        margin-left: 15px;
+        margin-top: 10px;
+
+    }
+    .left_main{
+        margin: 0;
+        padding: 0;
+    }
+    .left_main .imgg{
+        width: 375px;
+        height: 375px;
+        margin: 0;
+        border-radius: 0;
+    }
+    .images{
+        display: none;
+    }
+    input:focus{
+        box-shadow: none;
+        border: none;
+        background-color:rgb(245, 245, 245) ;
+    }
+    h1{
+        font-size:20px;
+    }
+    .all_bt{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons{
+        justify-content: space-between;
+        border-radius: 8px;
+        margin-right: 20px;
+        display: flex;
+        background-color: rgb(245, 245, 245);
+        margin-bottom: 10px;
+        
+    }
+    .buttons button{
+        margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 25px;
+        background-color: rgb(245, 245, 245);
+        border: none;
+        width: 60px;
+        height: 50px;
+        color: hsl(26, 100%, 55%);
+    }
+    .description{
+        color: hsl(220, 14%, 75%);
+        width: 360px;
+    }
+    .price{
+        display: flex;
+        align-items: center;
+    }
+    .old_price{
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+        margin-left: 125px;
+    }
+}
