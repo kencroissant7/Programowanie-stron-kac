@@ -15,10 +15,37 @@
   </style>
 </head>
 <body>
+  <div class="gallery" id="gallery">
+    <div class="main_pic">
+    <div class="mainpicc">
+      
+
+      <svg class="lewy" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="#ffffff" fill-rule="evenodd"/></svg>
+      </div>
+
+      <div class="back" onclick="back()">
+        <svg id="back" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+      </div>
+
+      <img class="imggg" src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1.jpg" alt="" id="zdj1">
+      
+      
+
+      <svg class="prawy" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="#ffffff" fill-rule="evenodd"/></svg>
+    </div>
+    
+      <div class="imagess">
+    <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1-thumbnail.jpg" alt="" onclick="ffunkcja()">
+    <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-2-thumbnail.jpg" alt="" onclick="ffunkcja1()">
+    <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-3-thumbnail.jpg" alt="" onclick="ffunkcja2()">
+    <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-4-thumbnail.jpg" alt="" onclick="ffunkcja3()">
+    </div>
+    </div>
+  </div>
   <div class="navbar">
-    <button class="app"><img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-menu.svg" alt=""></button>
+    <button class="app"><img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-menu.svg" alt=""></button>
     <div class="img">
-      <img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\logo.svg" alt="">
+      <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\logo.svg" alt="">
     </div>
     
 <nav>
@@ -33,12 +60,15 @@
 
 <div class="right_nav">
 
-  <div class="shopping_cart">
-  <img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-cart.svg" alt="">
+  <div class="shopping_cart"  onclick="cart()">
+  <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-cart.svg" alt="">
+  <div class="cart" id="cart">
+
+  </div>
   </div>
 
   <div class="profile_pic">
-  <img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-avatar.png" alt="">
+  <img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-avatar.png" alt="">
   </div>
 
 </div>
@@ -49,15 +79,19 @@
 
   <main>
 <div class="left_main">
-  <img class="imgg" src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1.jpg" alt="">
+  
+  <img class="imgg" src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1.jpg" alt="" id="zdj" onclick="gallery()">
+  
 
 <div class="images">
-<img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1-thumbnail.jpg" alt="">
-<img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-2-thumbnail.jpg" alt="">
-<img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-3-thumbnail.jpg" alt="">
-<img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-4-thumbnail.jpg" alt="">
+<img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-1-thumbnail.jpg" alt="" onclick="funkcja()">
+<img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-2-thumbnail.jpg" alt="" onclick="funkcja1()">
+<img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-3-thumbnail.jpg" alt="" onclick="funkcja2()">
+<img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\image-product-4-thumbnail.jpg" alt="" onclick="funkcja3()">
 </div>
 </div>
+
+
 
 <div class="right_main">
   <p class="brand"> SNEAKER COMPANY </p>
@@ -79,9 +113,9 @@
 
 <div class="all_bt">
 <div class="buttons">
-  <button><img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-minus.svg" alt=""></button>
-  <input type="text" class="result_cart" placeholder="0">
-  <button><img src="C:\Users\Programista\Desktop\KBienkowski2CT\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-plus.svg" alt=""></button>
+  <button onclick="odj()"><img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-minus.svg" alt=""></button>
+  <input type="text" class="result_cart" id="result_cart" value="0" placeholder="0">
+  <button onclick="dod()"><img src="C:\Users\Programista\Desktop\2abkct\Programowanie-stron-kac\22.04.2024\ecommerce-product-page-main\images\icon-plus.svg" alt=""></button>
 </div>
 
   <button class="add"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>Add to cart</button>
@@ -92,5 +126,90 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Me</a>.
   </div>
+  <script>
+    function gallery(){
+      let mainimg = document.getElementById("zdj1");
+      let gallery = document.getElementById("gallery");
+      gallery.style.display = "block";
+    }
+
+    
+    function funkcja(){
+      var mainimg = document.getElementById("zdj");
+      var img1 = "images/image-product-1.jpg";
+      mainimg.src = img1;
+    }
+    function funkcja1(){
+      var mainimg = document.getElementById("zdj");
+      var img2 = "images/image-product-2.jpg"
+      mainimg.src = img2;
+    }
+    function funkcja2(){
+      var mainimg = document.getElementById("zdj");
+      var img3 = "images/image-product-3.jpg"
+      mainimg.src = img3;
+    }
+    function funkcja3(){
+      var mainimg = document.getElementById("zdj");
+      var img4 = "images/image-product-4.jpg"
+      mainimg.src = img4;
+    }
+
+    function ffunkcja(){
+      var mainimg = document.getElementById("zdj1");
+      var img1 = "images/image-product-1.jpg";
+      mainimg.src = img1;
+    }
+    function ffunkcja1(){
+      var mainimg = document.getElementById("zdj1");
+      var img2 = "images/image-product-2.jpg"
+      mainimg.src = img2;
+    }
+    function ffunkcja2(){
+      var mainimg = document.getElementById("zdj1");
+      var img3 = "images/image-product-3.jpg"
+      mainimg.src = img3;
+    }
+    function ffunkcja3(){
+      var mainimg = document.getElementById("zdj1");
+      var img4 = "images/image-product-4.jpg"
+      mainimg.src = img4;
+    }
+
+
+    function dod() {
+      let plus = document.getElementById("result_cart").value;
+      console.log(plus);
+      let temp;
+      plus = parseInt(plus);
+      temp = plus += 1;
+      document.getElementById("result_cart").value = temp;
+    }
+  
+    function odj() {
+      let plus = document.getElementById("result_cart").value;
+      console.log(plus);
+      let temp;
+      plus = parseInt(plus);
+      temp = plus -= 1;
+      document.getElementById("result_cart").value = temp;
+    }
+    function back(){
+      var gallery = document.getElementById("gallery");
+      gallery.style.display = "none";
+    }
+
+    function cart(){
+      let cart = document.getElementById("cart")
+    
+      if(cart.style.display == "none"){
+        cart.style.display("block");
+      }
+      if(cart.style.display == "block"){
+        
+        cart.style.display("none");
+      }
+    }
+  </script>
 </body>
 </html>

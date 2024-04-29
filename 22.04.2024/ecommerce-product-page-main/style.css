@@ -6,8 +6,11 @@ html,body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-left: 125px;
-    margin-right: 125px;
+}
+body{
+    padding-left: 125px;
+    padding-right: 125px;
+    position: relative;
 }
 .app{
     display: none;
@@ -16,11 +19,10 @@ html,body{
     position:sticky;
     font-weight: 500;
     color: hsl(220, 14%, 75%);
-    margin-top: 25px;
+    padding-top: 25px;
     font-family: kumbh sans;
     display: flex;
     align-items: center;
-    margin-bottom: 10px
 }
 .img{
     height: auto;
@@ -30,7 +32,6 @@ ul{
     display: flex;
 }
 li:hover{
-    padding-bottom: 40px;
     border-bottom: 2px solid hsl(26, 100%, 55%);
     
 }
@@ -41,8 +42,8 @@ nav li{
     list-style: none;
 }
 hr{
+    position: sticky;
     border: 1px rgb(239, 239, 239) solid;
-    margin-top: -18px;
 }
 .profile_pic img{
     width: 50px;
@@ -51,7 +52,7 @@ hr{
 .right_nav{
     display: flex;
     align-items: center;
-    margin-left: 480px;
+    margin-left: 800px;
 }
 .profile_pic{
     margin-left: 50px;
@@ -190,6 +191,81 @@ input:focus{
     margin-top: 16px;
     width: 105px;
     height: auto;
+}
+.images img:hover{
+    opacity: 0.6;
+    outline: 2px orange solid
+}
+.imagess img:hover{
+    opacity: 0.6;
+    outline: 2px orange solid;
+}
+  .gallery{
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.808);
+
+    z-index: 999;
+    display: none;
+    margin: 0;
+}
+.main_pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  .main_pic img{
+    opacity: 2;
+        margin-top: 15px;
+        border-radius: 20px;
+        width: 500px;
+        height: 500px;
+  }
+  .imagess{
+    justify-content: center;
+    display: flex;
+}
+.imagess img{
+    border-radius: 10px;
+    margin-right: 27px;
+    margin-top: 16px;
+    width: 105px;
+    height: auto;
+}
+.mainpicc{
+    display: flex;
+    align-items: center;
+}
+.mainpicc .imggg{
+    width: 650px;
+    height: auto;
+}
+.mainpicc svg{
+    width: 50px;
+    height: auto;
+}
+.back{
+padding-left: 700px;
+}
+.shopping_cart{
+    width: 10px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+}
+.cart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100px;
+    background-color: black;
+    display: none;
 }
 @media screen and (max-width:375px) {
     
