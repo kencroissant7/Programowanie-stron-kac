@@ -1,0 +1,55 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(187, 192, 230);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    width: 650px;
+    margin: auto;
+    margin-top: 50px;
+}
+input[type="text"],
+input[type="birthdate"],
+input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input[type="submit"] {
+    background-color: rgb(156, 0, 0);
+    color: white;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 75%;
+}
+
+
+
+
+#podsumowanie {
+    padding-left: 100px;
+    background-color:rgb(187, 192, 230);
+}
+
+
+
+

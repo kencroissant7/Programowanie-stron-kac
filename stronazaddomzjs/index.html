@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+                        <label for="name"> Imię:
+                         <input type="text" id="name" name="name" placeholder="Imię">
+                        </label>
+
+          <label for="famname"> Nazwisko:
+              <input type="text" id="famname" name="famname" placeholder="Nazwisko">
+          </label>
+
+                    <hr> <label for="birthdate">Data urodzenia:
+                           <input type="date" id="birthdate" name="birthdate" placeholder="Data">
+                         </label><hr>
+
+         <label for="phone">Numer telefonu:
+             <input type="text" id="phone" name="phone" placeholder="telefon">
+         </label>
+
+                        <label for="email">E-mail:
+                         <input type="text" id="email" name="email" placeholder="email">
+                        </label>
+
+            <label for="haslo">
+               Hasło:
+            <input type="password" id="haslo" name="haslo" placeholder="hasło">
+            </label>
+
+        <label for="powtorzhaslo">
+            Powtórz hasło:
+            <input type="password" id="powtorzhaslo" name="powtorzhaslo" placeholder="Powtórz hasło">
+        </label>
+            <hr>
+        <input type="submit" id="Rejestruj">
+
+    </form>
+    <div id="podsumowanie"></div>
+
+    <script>
+        let nameField = document.getElementById('name');
+        nameField.addEventListener('input', function (event) {
+            let name = nameField.value;
+            nameField.style.borderColor = name.length == 0 ? 'red' : 'green';
+        });
+
+                        let famnameField = document.getElementById('famname');
+                        famnameField.addEventListener('input', function (event) {
+                            let famname = famnameField.value;
+                            famnameField.style.borderColor = famname.length == 0 ? 'red' : 'green';
+                        });
+
+                        let poleData = document.getElementById('birthdate');
+                        poleData.addEventListener('input', function (event) {
+                            let data = poleData.value;
+                            poleData.style.borderColor = data.length == 0 ? 'red' : 'green';
+                        });
+
+        let poleTelefon = document.getElementById('phone');
+        poleTelefon.addEventListener('input', function (event) {
+            let telefon = poleTelefon.value;
+            if (telefon.length == 9 && !isNaN(telefon)) {
+                poleTelefon.style.borderColor = 'green';
+            } else {
+                poleTelefon.style.borderColor = 'red';
+            }
+        });
+
+                    let poleEmail = document.getElementById('email');
+                    poleEmail.addEventListener('input', function (event) {
+                        let email = poleEmail.value;
+                        poleEmail.style.borderColor = (email.includes('@') && email.includes('.')) ? 'green' : 'red';
+                    });
+
+                    let poleHaslo = document.getElementById('haslo');
+                    poleHaslo.addEventListener('input', function (event) {
+                        let haslo = poleHaslo.value;
+                        poleHaslo.style.borderColor = (haslo.length >= 8 && /\d/.test(haslo)) ? 'green' : 'red';
+                    });
+
+            let polepHaslo = document.getElementById('powtorzhaslo');
+            polepHaslo.addEventListener('input', function (event) {
+                let haslo = document.getElementById('haslo').value;
+                let powtorzhaslo = polepHaslo.value;
+                polepHaslo.style.borderColor = (haslo === powtorzhaslo) ? 'green' : 'red';
+            });
+
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let imie = nameField.value;
+                let nazwisko = famnameField.value;
+            let dataUrodzenia = poleData.value;
+                let email = poleEmail.value;
+            let telefon = poleTelefon.value;
+
+            let podsumowanie = `
+                <h2>Podsumowanie:</h2>
+                <p>Imię: ${imie}</p>
+                <p>Nazwisko: ${nazwisko}</p>
+                <p>Data urodzenia: ${dataUrodzenia}</p>
+                <p>E-mail: ${email}</p>
+                <p>Numer telefonu: ${telefon}</p>
+            `;
+
+            if (nameField.style.borderColor == 'green' && famnameField.style.borderColor == 'green' && poleData.style.borderColor == 'green' && poleEmail.style.borderColor == 'green' && poleTelefon.style.borderColor == 'green' && poleHaslo.style.borderColor == 'green' && polepHaslo.style.borderColor == 'green') {
+                document.getElementById('podsumowanie').innerHTML = podsumowanie;
+                document.getElementById('form').style.display = 'none';
+            }   else {
+                 alert('Wypełnij poprawnie formularz');
+             }
+        });
+    </script>
+</body>
+
+</html>
