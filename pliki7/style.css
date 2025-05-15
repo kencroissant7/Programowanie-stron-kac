@@ -1,0 +1,38 @@
+body{
+    font-family: Georgia;
+    text-align: center;
+    background-color: lightsteelblue;
+}
+form{
+    padding-top: 20px;
+}
+main{
+    overflow: auto;
+    padding: 30px;
+    height: 400px;
+}
+footer{
+    background-color: orange;
+    padding: 10px;
+}
+img{
+    width: 80%;
+}
+table{
+    width: 70%;
+    margin: auto;
+    border: dotted 1px Maroon;
+}
+tr{
+    background-color: lightsteelblue;
+}
+tr:hover{
+background-color: steelblue !important;
+color: white;
+}
+footer h3{
+    background-color: orange;
+}
+footer p{
+    background-color: orange;
+}
